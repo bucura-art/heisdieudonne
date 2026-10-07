@@ -61,11 +61,8 @@ export default function UseCase() {
     <section className="mt-16 text-slate-900" aria-labelledby="use-cases-title">
       <div className="mx-auto mb-8 max-w-2xl text-center">
         <h2 id="use-cases-title" className="mb-3 text-3xl font-bold text-slate-900">
-          Use cases where I can help you
+          Use cases
         </h2>
-        <p className="text-slate-700">
-          Reach out whenever you could use an extra hand with technology or a project.
-        </p>
       </div>
 
       <div className="mx-auto grid max-w-3xl gap-10">
