@@ -22,7 +22,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         <div className="flex w-full flex-1 flex-col justify-between gap-5">
           <div className="space-y-3">
             <div>
-              <h2 className="break-words text-xl font-bold">{project.name}</h2>
+              <h2 className="wrap-break-words text-xl font-bold">{project.name}</h2>
               <span
                 className={`mt-2 inline-block rounded-full border px-2 py-0.5 text-xs ${
                   project.status === "done"
@@ -36,7 +36,7 @@ export default function ProjectCard({ project }: { project: Project }) {
 
             <p className="text-base text-slate-700">{project.description}</p>
 
-            <div>
+            {/*<div>
               <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-600">
                 Tech Stack
               </p>
@@ -44,13 +44,13 @@ export default function ProjectCard({ project }: { project: Project }) {
                 {project.techStack.map((tech) => (
                   <span
                     key={tech}
-                    className="break-words rounded-md border border-slate-200 bg-slate-100 px-2 py-1 text-[11px] text-slate-800"
+                    className="wrap-break-words rounded-md border border-slate-200 bg-slate-100 px-2 py-1 text-[11px] text-slate-800"
                   >
                     {tech}
                   </span>
                 ))}
               </div>
-            </div>
+            </div>*/}
 
           </div>
 
@@ -61,7 +61,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                 target="_blank"
                 className="inline-flex items-center justify-center rounded-lg bg-black px-4 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90"
               >
-                view project ↗
+                visit project ↗
               </Link>
             ) : (
               <span className="inline-flex items-center justify-center rounded-lg border border-dashed border-slate-300 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-500">

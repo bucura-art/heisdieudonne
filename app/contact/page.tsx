@@ -53,7 +53,7 @@ export default function ContactPage() {
           <div className="max-w-3xl">
             <h1 className="mb-8 text-slate-900">Contact</h1>
             <p className="mb-12 text-2xl text-slate-900">
-              Open to learning, collaborating, and building real things.
+              Hit my line to sort it out in minutes not weeks.
             </p>
 
             <div className="grid gap-6 md:grid-cols-2">
@@ -91,7 +91,7 @@ export default function ContactPage() {
                       <p className="text-sm font-medium uppercase tracking-wider text-slate-600">
                         {social.platform}
                       </p>
-                      <p className="break-words text-lg font-semibold text-slate-900 transition-colors group-hover:text-accent">
+                      <p className="wrap-break-words text-lg font-semibold text-slate-900 transition-colors group-hover:text-accent">
                         {social.username}
                       </p>
                     </div>
@@ -107,7 +107,7 @@ export default function ContactPage() {
                   <p className="text-sm font-medium uppercase tracking-wider text-slate-600">
                     Location
                   </p>
-                  <p className="break-words text-lg font-semibold text-slate-900">
+                  <p className="wrap-break-words text-lg font-semibold text-slate-900">
                     {profile.location}
                   </p>
                 </div>

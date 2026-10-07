@@ -7,7 +7,7 @@ export default function FullSkills() {
       <div className="mb-6">
         <h2 className="mb-3 text-slate-900">Skills & Tools</h2>
         <p className="text-slate-900">
-          Based on time invested building and learning real systems.
+          Based on time invested building and learning.
         </p>
       </div>
 
