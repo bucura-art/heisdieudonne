@@ -44,7 +44,7 @@ export default function SkillBar({ name, level, index = 0, sources = [] }: Skill
 
   return (
     <div className="space-y-2" title={sources.length > 0 ? `Learnt via: ${sources.join(", ")}` : undefined}>
-      <div className="flex justify-between text-sm text-foreground">
+      <div className="flex justify-between text-sm text-slate-900">
         <span>{name}</span>
         <span>{count}%</span>
       </div>

@@ -88,7 +88,7 @@ export const education = [
       "Network Protocols",
     ]
   },
-  {
+  /*{
     title: "High school education (O' Level)",
     institution: "GS APAPEDUC BUNGWE",
     period: "2017 - 2020",
@@ -101,6 +101,6 @@ export const education = [
       "English",
       "ICT",
     ]
-  }
+  }*/
 
 ];

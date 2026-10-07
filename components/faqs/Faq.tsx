@@ -15,9 +15,9 @@ export default function Faq({ items }: FaqProps) {
       {items.map((item, index) => (
         <details
           key={index}
-          className="group border border-border rounded-xl bg-background/30 open:bg-accent/10 transition-all"
+          className="group rounded-xl border border-slate-200 bg-white transition-all open:bg-slate-50"
         >
-          <summary className="flex cursor-pointer items-center justify-between p-6 font-medium text-emerald-500 marker:content-none">
+          <summary className="flex cursor-pointer items-center justify-between p-6 font-medium text-slate-900 marker:content-none">
             {item.question}
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -29,12 +29,12 @@ export default function Faq({ items }: FaqProps) {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="h-5 w-5 transition-transform group-open:rotate-180 text-muted"
+              className="h-5 w-5 text-slate-600 transition-transform group-open:rotate-180"
             >
               <path d="m6 9 6 6 6-6" />
             </svg>
           </summary>
-          <div className="px-6 pb-6 text-green-500">
+          <div className="px-6 pb-6 text-slate-700">
             <p>{item.answer}</p>
           </div>
         </details>

@@ -102,3 +102,24 @@
     opacity: 0;
   }
 }
+
+@keyframes site-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.site-marquee-track {
+  animation: site-marquee 24s linear infinite;
+}
+
+.site-marquee:hover .site-marquee-track,
+.site-marquee:focus-within .site-marquee-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-marquee-track {
+    animation: none;
+  }
+}

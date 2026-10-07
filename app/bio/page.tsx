@@ -40,16 +40,7 @@ export default function BioPage() {
 
         {/* Main Content */}
         <div className="md:col-span-2 space-y-12">
-          <div>
-            <h2 className="text-2xl font-semibold mb-6">About Me</h2>
-            <div className="space-y-4 text-foreground leading-relaxed">
-              {profile.bio.map((paragraph, i) => (
-                <p key={i}>{paragraph}</p>
-              ))}
-            </div>
-          </div>
-
-          <div>
+        <div>
              <h2 className="text-2xl font-semibold mb-6">Education</h2>
              <div className="space-y-8">
                 {education.map((edu, i) => (

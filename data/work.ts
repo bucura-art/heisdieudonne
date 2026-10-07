@@ -7,17 +7,17 @@ export const work = [
     description: "Developed a full stack web application, For making money online while watching ads.",
   },*/
   {
-    title: "Designer",
-    company: "PROSPER MOBILITY || 0790525627",
+    title: "Web developer",
+    company: "Rogerz Bakery || 0790454357",
     period: "2025",
-    type: "Part-time",
-    description: "Designed a logo & banner for the company, creating a visual identity that reflects the brand's values and resonates with its target audience.",
+    type: "Freelance",
+    description: "Designed a logo and built the company website, creating a visual identity that reflects the brand's values and resonates with its target audience.",
   },
   {
-    title: "Web developer & designer",
+    title: "Web developer",
     company: "PISTON TOUR AND SAFARIS || 0782002381",
     period: "2026",
-    type: "Part-time",
+    type: "Freelance",
     description: "Designed logo and built the company website, ensuring a seamless user experience and responsive design to attract and engage potential customers.",
   },
   /*{
@@ -27,13 +27,13 @@ export const work = [
     type: "Personal Project",
     description: "Designed and developed personal web project, for UNILAK Community. A platform for sharing reviews, making announcements and facilitating communication within the UNILAK community.",
   },*/
-  {
+  /*{
     title: "Cleaner",
     company: "MARINE COFFEE SHOP || 0785679466",
     period: "2025",
     type: "Part-time",
     description: "Maintained cleanliness and hygiene standards in a busy coffee shop environment, ensuring a pleasant experience for customers.",
-  },
+  },*/
   {
     title: "Networking Intern",
     company: "DONA TECH LTD || 0781040002",
