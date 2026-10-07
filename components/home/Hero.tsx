@@ -43,12 +43,14 @@ export default function Hero() {
               key={stat.label}
               className="rounded-xl border border-slate-200 bg-white p-3 text-center sm:p-6"
             >
-              <p className="mb-2 text-3xl font-bold text-black">{stat.value}</p>
+              <p className="mb-2 text-3xl font-bold text-black [font-family:var(--font-rosemary)]">
+                {stat.value}
+              </p>
               <h2 className="text-sm text-black">{stat.label}</h2>
             </div>
           ))}
         </div>
-        <div className="relative mx-auto mt-4 aspect-square w-full max-w-[22rem] lg:mt-0">
+        <div className="relative mx-auto mt-4 aspect-square w-full max-w-22rem lg:mt-0">
           <div
             aria-hidden="true"
             className="absolute inset-[1%] rounded-full border border-slate-200"

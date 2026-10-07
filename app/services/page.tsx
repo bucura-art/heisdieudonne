@@ -6,11 +6,11 @@ import Navbar from "@/components/layout/Navbar";
 export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-[#e6e6e6] [--foreground:222_47%_11%] text-foreground">
-      <div className="grid w-full grid-cols-1 gap-12 px-4 pb-24 pt-16 md:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] md:px-6 md:pt-8">
-        <main className="order-last min-w-0 md:order-first">
-          <header className="mb-10 max-w-3xl">
-            <h1 className="mb-6 text-4xl font-bold text-slate-900">Services</h1>
-            <p className="text-xl text-slate-900">
+      <div className="grid w-full grid-cols-1 gap-12 px-4 pb-24 pt-24 md:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] md:px-6 md:pt-8">
+        <main className="order-last min-w-0 md:order-first md:pt-24">
+          <header className="mb-16 max-w-3xl">
+            <h1 className="mb-4 text-slate-900">Services</h1>
+            <p className="text-slate-900">
               Practical digital services to help you plan, build, and improve.
             </p>
           </header>

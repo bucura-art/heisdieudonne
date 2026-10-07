@@ -3,7 +3,6 @@ import Link from "next/link";
 type Project = {
   slug: string;
   name: string;
-  status: string;
   description: string;
   techStack: string[];
   link: string;
@@ -23,15 +22,6 @@ export default function ProjectCard({ project }: { project: Project }) {
           <div className="space-y-3">
             <div>
               <h2 className="wrap-break-words text-xl font-bold">{project.name}</h2>
-              <span
-                className={`mt-2 inline-block rounded-full border px-2 py-0.5 text-xs ${
-                  project.status === "done"
-                    ? "bg-green-500/10 text-green-500 border-green-500/20"
-                    : "bg-yellow-500/10 text-yellow-500 border-yellow-500/20"
-                }`}
-              >
-                {project.status}
-              </span>
             </div>
 
             <p className="text-base text-slate-700">{project.description}</p>

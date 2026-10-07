@@ -3,34 +3,19 @@ const useCaseGroups = [
     title: "Non-technical support",
     cases: [
       {
-        title: "Running out of time",
+        title: "Running out of time or got too much work",
         description:
           "A deadline is getting close and you need focused help to get the work across the line.",
       },
       {
-        title: "Too much work",
+        title: "Tools selection or need human opinion",
         description:
-          "You have a big workload and could use an extra pair of hands to plan or build.",
+          "You’re weighing options or planning a project and want a fresh perspective, Let me help you make the right choice.",
       },
       {
-        title: "Feeling exhausted",
-        description:
-          "You’ve been carrying a project alone and could use help sharing the load or finding a way forward.",
-      },
-      {
-        title: "Need a human opinion",
-        description:
-          "You’re weighing options or planning a project and want a fresh perspective.",
-      },
-      {
-        title: "Branding strategy",
+        title: "Need branding strategy or design",
         description:
           "You’re shaping how your business presents itself and want a clearer, more consistent brand.",
-      },
-      {
-        title: "Need business research",
-        description:
-          "You’re exploring an idea, audience, or market and need useful research to guide your next steps.",
       },
     ],
   },
@@ -68,28 +53,36 @@ export default function UseCase() {
       <div className="mx-auto grid max-w-3xl gap-10">
         {useCaseGroups.map((group) => (
           <div key={group.title}>
-            <h3 className="mb-4 text-2xl font-semibold text-slate-900">
+            <h3 className="mb-4 text-center text-2xl font-semibold text-slate-900">
               {group.title}
             </h3>
             <div className="grid grid-cols-1 gap-4">
-              {group.cases.map((useCase, index) => (
-                <article
+              {group.cases.map((useCase) => (
+                <details
                   key={useCase.title}
-                  className="flex min-h-28 w-full items-center gap-5 rounded-2xl border border-slate-200 bg-white p-5 text-left sm:p-6"
+                  className="group rounded-xl border border-slate-200 bg-white p-4 transition-colors hover:border-accent/50"
                 >
-                  <div
-                    aria-hidden="true"
-                    className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-slate-100 text-lg font-bold text-slate-900"
-                  >
-                    {index + 1}
-                  </div>
-                  <div>
-                    <h4 className="mb-1 text-xl font-semibold text-slate-900">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 [&::-webkit-details-marker]:hidden">
+                    <span role="heading" aria-level={4} className="text-xl font-semibold text-slate-900">
                       {useCase.title}
-                    </h4>
-                    <p className="text-sm text-slate-700">{useCase.description}</p>
-                  </div>
-                </article>
+                    </span>
+                    <svg
+                      aria-hidden="true"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      className="h-5 w-5 shrink-0 text-slate-600 transition-transform group-open:rotate-180"
+                    >
+                      <path
+                        d="m5 7.5 5 5 5-5"
+                        stroke="currentColor"
+                        strokeWidth="1.75"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </summary>
+                  <p className="pt-4 text-sm text-slate-700">{useCase.description}</p>
+                </details>
               ))}
             </div>
           </div>

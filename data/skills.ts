@@ -36,7 +36,7 @@ export const skills = [
     sources: ["Supabase Docs", "oracle", "ChatGPT", "Google"],
   },
   {
-    category: "Networking Security",
+    category: "Cyber Security",
     items: [
       { name: "Ethical Hacking Concepts", level: 3 },
       { name: "System Weakness Analysis", level: 3 },

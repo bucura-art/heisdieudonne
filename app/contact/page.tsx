@@ -17,8 +17,6 @@ function getLogoDomain(platform: string) {
       return "whatsapp.com";
     case "instagram":
       return "instagram.com";
-    case "email":
-      return "gmail.com";
     case "github":
       return "github.com";
     case "linkedin":
@@ -45,6 +43,24 @@ function PhoneIcon() {
   );
 }
 
+function EmailIcon() {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-6 w-6"
+    >
+      <rect x="3" y="5" width="18" height="14" rx="2" />
+      <path d="m3 7 9 6 9-6" />
+    </svg>
+  );
+}
+
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-[#e6e6e6] [--foreground:222_47%_11%] [--muted:215_16%_47%] [--border:214_32%_85%] text-foreground">
@@ -57,71 +73,87 @@ export default function ContactPage() {
             </p>
 
             <div className="grid gap-6 md:grid-cols-2">
-              {socials.map((social) => {
-                const logoDomain = getLogoDomain(social.platform);
-                return (
-                  <Link
-                    key={social.platform}
-                    href={social.url}
-                    target="_blank"
-                    className="group flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-6 transition-all hover:border-accent"
-                  >
-                    <div
-                      aria-hidden="true"
-                      className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-slate-200 bg-slate-50 p-3 text-slate-900 transition-colors group-hover:border-accent/50"
-                    >
-                      {logoDomain && hasLogoDevToken ? (
-                        <Image
-                          src={`https://img.logo.dev/${logoDomain}?token=${logoDevToken}&size=96&format=png`}
-                          alt=""
-                          width={96}
-                          height={96}
-                          unoptimized
-                          className="h-full w-full object-contain"
-                        />
-                      ) : logoDomain ? (
-                        <span className="text-xs font-bold">
-                          {social.platform.slice(0, 2).toUpperCase()}
+              <div
+                role="group"
+                aria-label="Social links"
+                className="flex flex-wrap gap-4 md:col-span-2"
+              >
+                {socials
+                  .filter(
+                    (social) =>
+                      social.platform !== "GitHub" &&
+                      social.platform !== "LinkedIn",
+                  )
+                  .map((social) => {
+                    const logoDomain = getLogoDomain(social.platform);
+                    const actionLabel =
+                      social.platform === "WhatsApp"
+                        ? "Message"
+                        : social.platform === "Instagram"
+                          ? "DM"
+                          : social.platform === "Phone"
+                            ? "Call"
+                            : "Email";
+                    return (
+                      <Link
+                        key={social.platform}
+                        href={social.url}
+                        target="_blank"
+                        aria-label={`${social.platform}: ${social.username}`}
+                        className="group flex w-16 flex-col items-center gap-2 text-center text-xs font-medium text-slate-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                      >
+                        <span className="flex h-14 w-14 items-center justify-center rounded-full border border-slate-200 bg-white p-3 text-slate-900 transition-colors group-hover:border-accent">
+                          {social.platform.toLowerCase() === "email" ? (
+                            <EmailIcon />
+                          ) : logoDomain && hasLogoDevToken ? (
+                            <Image
+                              src={`https://img.logo.dev/${logoDomain}?token=${logoDevToken}&size=96&format=png`}
+                              alt=""
+                              width={96}
+                              height={96}
+                              unoptimized
+                              className="h-full w-full object-contain"
+                            />
+                          ) : logoDomain ? (
+                            <span
+                              aria-hidden="true"
+                              className="text-xs font-bold"
+                            >
+                              {social.platform.slice(0, 2).toUpperCase()}
+                            </span>
+                          ) : (
+                            <PhoneIcon />
+                          )}
                         </span>
-                      ) : (
-                        <PhoneIcon />
-                      )}
-                    </div>
-                    <div className="min-w-0">
-                      <p className="text-sm font-medium uppercase tracking-wider text-slate-600">
-                        {social.platform}
-                      </p>
-                      <p className="wrap-break-words text-lg font-semibold text-slate-900 transition-colors group-hover:text-accent">
-                        {social.username}
-                      </p>
-                    </div>
-                  </Link>
-                );
-              })}
-
-              <div className="flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-6">
-                <div className="rounded-full border border-slate-200 bg-slate-50 p-3 text-slate-900">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                </div>
-                <div className="min-w-0">
-                  <p className="text-sm font-medium uppercase tracking-wider text-slate-600">
-                    Location
-                  </p>
-                  <p className="wrap-break-words text-lg font-semibold text-slate-900">
-                    {profile.location}
-                  </p>
-                </div>
+                        <span>{actionLabel}</span>
+                      </Link>
+                    );
+                  })}
               </div>
 
-              <div className="flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-6">
-                <div className="rounded-full border border-slate-200 bg-slate-50 p-3">
-                  <span className="text-xl">🟢</span>
-                </div>
-                <div>
-                  <p className="text-sm font-medium uppercase tracking-wider text-slate-600">
-                    Availability
+              <div className="mt-4 flex items-start gap-3 text-slate-900 md:col-span-2">
+                <svg
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="mt-1 h-6 w-6 shrink-0"
+                >
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                <div className="min-w-0">
+                  <p className="wrap-break-words text-lg font-semibold">
+                    {profile.location}
                   </p>
-                  <p className="text-lg font-semibold text-slate-900">
+                  <p className="mt-1 flex items-center gap-2 text-sm text-slate-600">
+                    <span aria-hidden="true" className="text-base">🟢</span>
                     24/7 Available
                   </p>
                 </div>

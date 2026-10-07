@@ -3,9 +3,9 @@ import SkillBar from "./SkillBar";
 
 export default function FullSkills() {
   return (
-    <section className="w-full text-slate-900">
-      <div className="mb-6">
-        <h2 className="mb-3 text-slate-900">Skills & Tools</h2>
+    <section className="w-full pt-24 text-slate-900">
+      <div className="mb-16 max-w-3xl">
+        <h1 className="mb-4 text-slate-900">Skills</h1>
         <p className="text-slate-900">
           Based on time invested building and learning.
         </p>

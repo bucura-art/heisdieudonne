@@ -2,17 +2,15 @@ export const projects = [
   {
     slug: "rogerz-bakery",
     name: "Rogerz Bakery",
-    status: "Done",
     featured: true,
     description:
       "A modern bakery focused on clarity, trust, and performance.",
     techStack: ["Next.js", "Tailwind CSS", "Framer motion", "Vercel"],
     link: "https://primesite.vercel.app",
   },
-    {
+  {
     slug: "health-space",
     name: "Rwanda Health Space",
-    status: "Progress",
     featured: false,
     description: "A web and mobile application that provides AI-powered solutions for health services such as AI chatbot companion (baza shangazi), personalised insights, guided programs health facilities locator.",
     techStack: ["Next.js", "Tailwind CSS", "Supabase", "Machine learning", "SSE","Cloudflare", "Pinecone", "Vercel", "Cloudinary", "groq", "RAG", "framer motion"],
@@ -21,7 +19,6 @@ export const projects = [
   {
     slug: "bucura-ai",
     name: "Bucura AI Assistant",
-    status: "Progress",
     featured: true,
     description: "A web application that provides AI-powered solutions for various tasks, such as customer support chatbot and personal daily tasks.",
     techStack: ["Next.js", "Tailwind CSS", "Supabase", "Machine learning", "SSE","Cloudflare", "Pinecone", "Vercel", "Cloudinary", "groq", "RAG", "framer motion"],
@@ -30,7 +27,6 @@ export const projects = [
   /*{
     slug: "fast-earn.",
     name: "FAST EARN",
-    status: "Done",
     featured: false,
     description: "A website for making money online while watching ads quickly and easily.",
     techStack: ["Next.js", "Tailwind CSS", "Supabase", "Vercel"],
@@ -39,7 +35,6 @@ export const projects = [
   {
     slug: "piston-tours",
     name: "PISTON TOUR AND SAFARIS",
-    status: "Done",
     featured: true,
     description:
       "A modern tourism website focused on clarity, trust, and performance.",
@@ -49,7 +44,6 @@ export const projects = [
   {
     slug: "hello-unilak",
     name: "HELLO UNILAK",
-    status: "Done",
     featured: true,
     description: "A website for UNILAK students to find classes, announcements and connect theough events.",
     techStack: ["Next.js", "Tailwind CSS", "Supabase", "Vercel"],
@@ -63,7 +57,6 @@ export const projects = [
   /*{
     slug: "coming-soon",
     name: "Upcoming Project: my-portfolio!",
-    status: "planned",
     featured: true,
     description: "It is about digital portifolio for everyone.",
     techStack: ["Flutter", "Dart", "Firebase", "Node.js", "cloudinary"],

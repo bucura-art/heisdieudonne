@@ -4,7 +4,7 @@ export const profile = {
   profilePicture: "/developer/profile-picture.jpg",
   bio: [
     "Hey there!",
-    "If you're into computer use, technology, SaaS, SEO, AI and need some help or just curious about how things work, you're in the right place.",
+    "If you're into tech, SaaS, SEO, AI and need some help or just curious about how things work, you're in the right place.",
     "Hit my line to sort it out in minutes not weeks.",
   ],
   location: "Kigali, Rwanda",

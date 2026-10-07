@@ -5,9 +5,9 @@ import { usePathname } from "next/navigation";
 
 const navLinks = [
   { name: "Home", href: "/", icon: "home" },
-  { name: "Work", href: "/projects", icon: "folder" },
+  { name: "Work", href: "/work", icon: "folder" },
+  { name: "Skills", href: "/skills", icon: "education" },
   { name: "Services", href: "/services", icon: "services" },
-  { name: "Education", href: "/experience", icon: "education" },
   { name: "Contact", href: "/contact", icon: "contact" },
 ] as const;
 
@@ -108,7 +108,7 @@ export default function Navbar() {
   return (
     <nav
       aria-label="Main navigation"
-      className="fixed inset-x-0 top-0 z-50 flex w-full max-w-full justify-center py-3 md:sticky md:inset-x-auto md:justify-end"
+      className="fixed inset-x-0 bottom-0 top-auto z-50 flex w-full max-w-full justify-center py-3 md:sticky md:inset-x-auto md:bottom-auto md:top-0 md:justify-end"
     >
       <div className="flex w-full max-w-full flex-nowrap items-center justify-between gap-0.5 rounded-3xl border border-slate-200 bg-white p-1.5 shadow-lg shadow-slate-900/10 sm:gap-1 sm:p-2">
         {navLinks.map((link) => (

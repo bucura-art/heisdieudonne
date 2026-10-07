@@ -9,6 +9,17 @@ export default function WelcomeMessage() {
           <p key={index}>{paragraph}</p>
         ))}
       </div>
+      <iframe
+        title="Spotify track player"
+        style={{ borderRadius: 12 }}
+        src="https://open.spotify.com/embed/track/3eekarcy7kvN4yt5ZFzltW?utm_source=generator&si=0ee14f1a1ab243d0"
+        width="100%"
+        height="152"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        allowFullScreen
+        loading="lazy"
+        className="mt-6"
+      />
     </div>
   );
 }

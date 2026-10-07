@@ -4,7 +4,7 @@ export default function FullExperience() {
   return (
     <section className="container py-24">
       <div className="max-w-3xl mb-16">
-        <h1 className="mb-4 text-slate-900">Experience</h1>
+        <h1 className="mb-4 text-slate-900">Education</h1>
         <p className="text-slate-900">
           Academic foundation and areas of study.
         </p>
@@ -21,9 +21,11 @@ export default function FullExperience() {
               <h4 className="text-xl font-semibold mb-1 text-slate-900 flex flex-wrap items-center gap-2">
                 {item.title}
               </h4>
-              <span className="inline-block px-2 py-0.5 rounded-full border border-green-500/20 bg-green-500/10 text-green-400 backdrop-blur text-xs">
-                {item.period} <span className="text-slate-900">|</span> {item.status}
-              </span>
+              <p className="mb-2 text-xs text-emerald-700">
+                <span className="font-medium text-slate-950">#{item.period}</span>
+                <span className="px-1" aria-hidden="true">|</span>
+                {item.status}
+              </p>
               <p className="text-sm text-blue-400 mb-2">
                 {item.institution}
               </p>
